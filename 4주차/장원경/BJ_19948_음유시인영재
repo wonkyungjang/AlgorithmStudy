@@ -1,0 +1,64 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class BJ_19948_음유시인영재 {
+	static int cnt[];
+	static int space;
+	static String res;
+	public static void main(String[] args) throws IOException {
+		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		String str=br.readLine();
+		char c[]=str.toCharArray();
+		space=Integer.parseInt(br.readLine());
+		StringTokenizer st=new StringTokenizer(br.readLine());
+		cnt=new int[26];
+		for(int i=0;i<26;i++) cnt[i]=Integer.parseInt(st.nextToken());
+		StringBuilder sb=new StringBuilder();
+		sb.append((c[0]+"").toUpperCase());
+		
+		for(int i=1;i<c.length;i++) {
+			//앞 문자가 공백, 뒤 문자가 알파벳이면 sb에 알파벳을 대문자로 추가
+			if(c[i]==' '&& c[i+1]!=' ') sb.append((c[i+1]+"").toUpperCase());
+		}
+		res="";
+		res+=sb;
+		//시의 내용
+		for(int i=0;i<c.length;i++) {
+			char acp=c[i];
+			//앞 뒤가 동일한 문자일 때 반복
+			while(i+1<c.length && c[i]==c[i+1]) {
+					i++;
+					//*** 이거안해주니까 while밖에서 c[i-1]..c[i]하면서 복잡해짐
+					acp=c[i];
+			}
+			if(acp==' ') {
+				space--;
+				if(space<0) {
+					res="-1";
+					break;
+				}
+			}else {
+				cnt[(acp+"").toUpperCase().charAt(0)-'A']--;
+				if(cnt[(acp+"").toUpperCase().charAt(0)-'A']<0) {
+					res="-1";
+					break;
+				}
+				}
+				}
+			//시의 제목
+			if(res!="-1") {
+				for(int i=0;i<sb.length();i++) {
+					cnt[sb.charAt(i)-'A']--;			
+					if(cnt[sb.charAt(i)-'A']<0) {
+						res="-1"; 
+						break;
+					}
+				}
+			}
+			System.out.println(res);
+	}
+
+}
