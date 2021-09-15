@@ -5,6 +5,14 @@
 
 # Algorithm Study
 
+### 5주차 (21.09.24)
+레벨 | 번호 | 제목
+:-: | :-: | :-:
+<img src="https://static.solved.ac/tier_small/7.svg" height="18px"/> | [9372](http://noj.am/9372) | 상근이의 여행
+<img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [1197](http://noj.am/1197) | 최소 스패닝 트리
+<img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [4386](http://noj.am/4386) | 별자리 만들기
+<img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [1774](http://noj.am/1774) | 다리 만들기2
+
 ### 4주차 (21.09.15)
 레벨 | 번호 | 제목
 :-: | :-: | :-:
