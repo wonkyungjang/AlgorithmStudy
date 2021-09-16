@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
+// 최소 스패닝 트리
 public class Main_BOJ_1197 {
 
 	static class Edge implements Comparable<Edge> {
