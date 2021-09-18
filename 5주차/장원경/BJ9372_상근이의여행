@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class BJ9372_상근이의여행 {
+
+	static int T,N,M;
+	static int[][] plane;
+	static int[] p;
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		T=sc.nextInt();
+		for(int t=1;t<=T;t++) {
+			N=sc.nextInt();
+			M=sc.nextInt();
+			plane=new int[M][2];
+			for(int i=0;i<M;i++) {
+				plane[i][0]=sc.nextInt();
+				plane[i][1]=sc.nextInt();
+			}
+			make();
+			int cnt=0;
+			for(int i=0;i<M;i++) {
+				if(union(plane[i][0],plane[i][1])) {
+					cnt++;
+				}
+			}
+			System.out.println(cnt);
+		}
+	}
+	private static boolean union(int a, int b) {
+		int roota=findp(a);
+		int rootb=findp(b);
+		if(roota==rootb) return false;
+		p[roota]=rootb;
+		return true;
+	}
+	//가장 부모 찾기!
+	private static int findp(int i) {
+		if(i==p[i]) return i;
+		return p[i]=findp(p[i]);
+	}
+
+	private static void make() {
+		p=new int[N+1];
+		for(int i=1;i<=N;i++) {
+			p[i]=i;
+		}
+	}
+}
