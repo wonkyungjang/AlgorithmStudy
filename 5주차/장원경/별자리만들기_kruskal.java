@@ -27,6 +27,7 @@ public class 별자리만들기_kruskal {
 	static int p[];
 	static PriorityQueue<Edge> pq;
 	public static void main(String[] args) throws IOException,NumberFormatException {
+		
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		n=Integer.parseInt(br.readLine());
 		star=new float[n][2];
