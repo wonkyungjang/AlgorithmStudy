@@ -63,7 +63,6 @@ public class Main_1774 {
 			st = new StringTokenizer(br.readLine());
 			int start = Integer.parseInt(st.nextToken());
 			int end = Integer.parseInt(st.nextToken());
-			double dist = Math.sqrt(Math.pow(star[start].x-star[end].x, 2)+Math.pow(star[start].y-star[end].y, 2));
 			union(start, end);
 		}
 		
