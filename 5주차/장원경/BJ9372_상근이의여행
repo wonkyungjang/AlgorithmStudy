@@ -9,6 +9,7 @@ public class BJ9372_상근이의여행 {
 		Scanner sc= new Scanner(System.in);
 		T=sc.nextInt();
 		for(int t=1;t<=T;t++) {
+		
 			N=sc.nextInt();
 			M=sc.nextInt();
 			plane=new int[M][2];
