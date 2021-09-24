@@ -4,8 +4,15 @@
 <!-- <img src="https://static.solved.ac/tier_small/*LEVEL*.svg" height="18px" /> | [*NO*](http://noj.am/*NO*) | *TITLE* -->
 
 # Algorithm Study
-
-### 5주차 (21.09.24)
+### 6주차 (21.09.29)
+레벨 | 번호 | 제목
+:-: | :-: | :-:
+<img src="https://static.solved.ac/tier_small/10.svg" height="18px"/> | [1389](http://noj.am/1389) | 케빈 베이컨의 6단계 법칙
+<img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [1759](http://noj.am/1759) | 암호 만들기
+<img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [2636](http://noj.am/2636) | 치즈
+<img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [1600](http://noj.am/1600) | 말이 되고픈 원숭이
+#
+### 5주차 (21.09.24) - MST
 레벨 | 번호 | 제목
 :-: | :-: | :-:
 <img src="https://static.solved.ac/tier_small/7.svg" height="18px"/> | [9372](http://noj.am/9372) | 상근이의 여행
