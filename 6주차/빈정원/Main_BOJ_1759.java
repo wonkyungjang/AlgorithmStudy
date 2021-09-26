@@ -18,9 +18,8 @@ public class Main_BOJ_1759 {
 		C = Integer.parseInt(st.nextToken());
 		alpha = new char[C];
 		st = new StringTokenizer(br.readLine());
-		for (int i = 0; i < C; i++) {
+		for (int i = 0; i < C; i++)
 			alpha[i] = st.nextToken().charAt(0);
-		}
 		Arrays.sort(alpha);		// 증가하는 순서로 배열되어 있으므로 정렬
 		combi(0, 0, new StringBuilder());
 	}
