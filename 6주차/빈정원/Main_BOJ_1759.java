@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 // 암호 만들기
-public class Main_BOJ_1769 {
+public class Main_BOJ_1759 {
 
 	static int L, C;
 	static char[] alpha;
@@ -22,10 +22,10 @@ public class Main_BOJ_1769 {
 			alpha[i] = st.nextToken().charAt(0);
 		}
 		Arrays.sort(alpha);		// 증가하는 순서로 배열되어 있으므로 정렬
-		permutation(0, 0, new StringBuilder());
+		combi(0, 0, new StringBuilder());
 	}
 
-	public static void permutation(int start, int cnt, StringBuilder pwd) {
+	public static void combi(int start, int cnt, StringBuilder pwd) {
 		if (cnt == L) {
 			int vo = 0;
 			int co = 0;
@@ -39,7 +39,7 @@ public class Main_BOJ_1769 {
 			return;
 		}
 		for (int i = start; i < C; i++) {
-			permutation(i + 1, cnt + 1, pwd.append(alpha[i]));
+			combi(i + 1, cnt + 1, pwd.append(alpha[i]));
 			pwd.deleteCharAt(pwd.length() - 1);
 		}
 	}
