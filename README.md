@@ -4,7 +4,15 @@
 <!-- <img src="https://static.solved.ac/tier_small/*LEVEL*.svg" height="18px" /> | [*NO*](http://noj.am/*NO*) | *TITLE* -->
 
 # Algorithm Study
-### 6주차 (21.09.29)
+### 7주차 (21.10.06) - 수학, 백트래킹
+레벨 | 번호 | 제목
+:-: | :-: | :-:
+<img src="https://static.solved.ac/tier_small/6.svg" height="18px"/> | [2609](http://noj.am/2609) | 최대공약수와 최소공배수
+<img src="https://static.solved.ac/tier_small/7.svg" height="18px"/> | [16463](http://noj.am/16463) | 13일의 금요일
+<img src="https://static.solved.ac/tier_small/8.svg" height="18px"/> | [14889](http://noj.am/14889) | 스타트와 링크
+<img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [2239](http://noj.am/2239) | 스도쿠
+#
+### 6주차 (21.09.29) - 월말평가 대비
 레벨 | 번호 | 제목
 :-: | :-: | :-:
 <img src="https://static.solved.ac/tier_small/10.svg" height="18px"/> | [1389](http://noj.am/1389) | 케빈 베이컨의 6단계 법칙
