@@ -1,0 +1,31 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Main2609_최대공약수와최소공배수 {
+	
+	static int N,M;
+	public static void main(String[] args) throws IOException {
+		
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st=new StringTokenizer(br.readLine());
+		N=Integer.parseInt(st.nextToken());
+		M=Integer.parseInt(st.nextToken());
+		//N과 M 중 더 작은 값을 key에 저장
+		int key= N>M? M :N;
+		int max=Integer.MIN_VALUE;
+		//1부터 key까지 나눠보면서 제일 큰 i를 최대공약수에 저장
+		for(int i=1;i<=key;i++) {
+			if(N%i==0 && M%i==0) {
+				if(max<i) max=i;
+			}
+		}
+		//N M의 곱을 최대공약수로 나눔 = 최소공배수
+		int min=(N*M)/max;
+		System.out.println(max);
+		System.out.println(min);
+
+	}
+
+}
