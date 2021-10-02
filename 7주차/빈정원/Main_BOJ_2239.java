@@ -5,9 +5,8 @@ import java.util.Scanner;
 // 스도쿠
 public class Main_BOJ_2239 {
 
-	static final int SIZE = 81;
-	static int[] map = new int[SIZE];
-	static boolean[] v = new boolean[SIZE];
+	static int[] map = new int[81];
+	static boolean[] v = new boolean[81];
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -21,7 +20,7 @@ public class Main_BOJ_2239 {
 			}
 		}
 		
-		for (int i = 0; i < SIZE; i++) {
+		for (int i = 0; i < 81; i++) {
 			if (map[i] == 0) {
 				dfs(i);
 				break;
@@ -31,7 +30,7 @@ public class Main_BOJ_2239 {
 
 	private static void dfs(int idx) {
 		if (idx == 81) {
-			for (int i = 0; i < SIZE; i++) {
+			for (int i = 0; i < 81; i++) {
 				System.out.print(map[i]);
 				if (i % 9 == 8) System.out.println();
 			}
