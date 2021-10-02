@@ -22,13 +22,13 @@ public class Main_BOJ_2239 {
 		
 		for (int i = 0; i < 81; i++) {
 			if (map[i] == 0) {
-				dfs(i);
+				sudoku(i);
 				break;
 			}
 		}
 	}
 
-	private static void dfs(int idx) {
+	private static void sudoku(int idx) {
 		if (idx == 81) {
 			for (int i = 0; i < 81; i++) {
 				System.out.print(map[i]);
@@ -38,12 +38,12 @@ public class Main_BOJ_2239 {
 		}
 
 		if (v[idx])
-			dfs(idx + 1);
+			sudoku(idx + 1);
 		
 		for (int i = 1; i <= 9; i++) {	
 			if (!v[idx] && check(idx, i)) {
 				map[idx] = i;
-				dfs(idx + 1);
+				sudoku(idx + 1);
 				map[idx] = 0;
 			}
 		}
