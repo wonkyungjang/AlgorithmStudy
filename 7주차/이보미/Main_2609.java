@@ -37,5 +37,4 @@ public class Main_2609 {
 		}
 		return a;
 	}
-
 }
