@@ -4,6 +4,14 @@
 <!-- <img src="https://static.solved.ac/tier_small/*LEVEL*.svg" height="18px" /> | [*NO*](http://noj.am/*NO*) | *TITLE* -->
 
 # Algorithm Study
+### 8주차 (21.10.13) - 다익스트라
+레벨 | 번호 | 제목
+:-: | :-: | :-:
+<img src="https://static.solved.ac/tier_small/10.svg" height="18px"/> | [14496](http://noj.am/14496) | 그대, 그머가 되어
+<img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [1753](http://noj.am/1753) | 최단경로
+<img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [4485](http://noj.am/4485) | 녹색 옷 입은 애가 젤다지?
+<img src="https://static.solved.ac/tier_small/12.svg" height="18px"/> | [1261](http://noj.am/1261) | 알고스팟
+#
 ### 7주차 (21.10.06) - 수학, 백트래킹
 레벨 | 번호 | 제목
 :-: | :-: | :-:
