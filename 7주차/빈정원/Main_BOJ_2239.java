@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Main_BOJ_2239 {
 
 	static int[] map = new int[81];
-	static boolean[] v = new boolean[81];
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -15,8 +14,6 @@ public class Main_BOJ_2239 {
 			for (int j = 0; j < 9; j++) {
 				int idx = i * 9 + j;
 				map[idx] = str.charAt(j) - '0';
-				if (map[idx] != 0)
-					v[idx] = true;
 			}
 		}
 		
@@ -37,17 +34,17 @@ public class Main_BOJ_2239 {
 			System.exit(0);
 		}
 
-		if (v[idx])
+		if (map[idx] != 0)
 			sudoku(idx + 1);
-		
-		for (int i = 1; i <= 9; i++) {	
-			if (!v[idx] && check(idx, i)) {
-				map[idx] = i;
-				sudoku(idx + 1);
-				map[idx] = 0;
-			}
+		else {
+			for (int i = 1; i <= 9; i++) {	
+				if (check(idx, i)) {
+					map[idx] = i;
+					sudoku(idx + 1);
+					map[idx] = 0;
+				}
+			}			
 		}
-		
 	}
 	
 	private static boolean check(int idx, int num) {
