@@ -4,6 +4,12 @@
 <!-- <img src="https://static.solved.ac/tier_small/*LEVEL*.svg" height="18px" /> | [*NO*](http://noj.am/*NO*) | *TITLE* -->
 
 # Algorithm Study
+### 9주차 (21.10.20) - N과 M 시리즈
+정원 : https://www.acmicpc.net/workbook/view/2052 </br>
+성현 : 1, 4, 7, 10 </br>
+원경 : 2, 5, 8, 11 </br>
+보미 : 3, 6, 9, 12 </br>
+#
 ### 8주차 (21.10.13) - 다익스트라
 레벨 | 번호 | 제목
 :-: | :-: | :-:
