@@ -2,7 +2,6 @@ package _08_1013;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
@@ -10,26 +9,26 @@ import java.util.StringTokenizer;
 public class Main_BOJ_1261 {
 
 	static class Edge implements Comparable<Edge> {
-		int id, cost;
+		int r, c, cost;
 
-		public Edge(int id, int cost) {
-			this.id = id;
+		public Edge(int r, int c, int cost) {
+			this.r = r;
+			this.c = c;
 			this.cost = cost;
 		}
 
 		@Override
-		public int compareTo(Edge e) {
-			return Integer.compare(this.cost, e.cost);
+		public int compareTo(Edge n) {
+			return Integer.compare(this.cost, n.cost);
 		}
-		
+
 	}
 	
 	static int M, N;
 	static int[][] map;
+	static int[][] dist;
 	static int[] dr = {-1, 1, 0, 0};
 	static int[] dc = {0, 0, -1, 1};
-	static ArrayList<Edge>[] adjList;
-	static int[] dist;
 	
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -37,58 +36,41 @@ public class Main_BOJ_1261 {
 		M = Integer.parseInt(st.nextToken());
 		N = Integer.parseInt(st.nextToken());
 		map = new int[N][M];
-		adjList = new ArrayList[N * M];
-		dist = new int[N * M];
-		for (int i = 0; i < N * M; i++) {
-			adjList[i] = new ArrayList<>();
-			dist[i] = Integer.MAX_VALUE;
-		}
+		dist = new int[N][M];
 		
 		for (int i = 0; i < N; i++) {
 			String str = br.readLine();
 			for (int j = 0; j < M; j++) {
 				map[i][j] = Integer.parseInt(str.charAt(j) + "");
+				dist[i][j] = Integer.MAX_VALUE;
 			}
 		}
 		
-		mapToGraph();
-		
 		dijkstra();
 		
-		System.out.println(dist[N * M - 1]);
+		System.out.println(dist[N - 1][M - 1]);
 
 	}
 
 	private static void dijkstra() {
 		PriorityQueue<Edge> pq = new PriorityQueue<>();
-		pq.add(new Edge(0, 0));
-		dist[0] = 0;
+		pq.add(new Edge(0, 0, 0));
+		dist[0][0] = 0;
 		
 		while (!pq.isEmpty()) {
 			Edge cur = pq.poll();
 			
-			if (cur.id == N * M - 1) break;
+			if (cur.r == N - 1 && cur.c == M - 1) break;
 			
-			if (dist[cur.id] < cur.cost) continue;
+			if (dist[cur.r][cur.c] < cur.cost) continue;
 			
-			for (Edge nxt : adjList[cur.id]) {
-				if (dist[nxt.id] > cur.cost + nxt.cost) {
-					dist[nxt.id] = cur.cost + nxt.cost;
-					pq.add(new Edge(nxt.id, dist[nxt.id]));
-				}
-			}
-		}
-		
-	}
-
-	private static void mapToGraph() {
-		for (int r = 0; r < N; r++) {
-			for (int c = 0; c < M; c++) {
-				for (int d = 0; d < 4; d++) {
-					int nr = r + dr[d];
-					int nc = c + dc[d];
-					if (nr < 0 || nr >= N || nc < 0 || nc >= M) continue;
-					adjList[r * M + c].add(new Edge(nr * M + nc, map[nr][nc]));
+			for (int d = 0; d < 4; d++) {
+				int nr = cur.r + dr[d];
+				int nc = cur.c + dc[d];
+				if (nr < 0 || nr >= N || nc < 0 || nc >= M) continue;
+				if (dist[nr][nc] > cur.cost + map[nr][nc]) {
+					dist[nr][nc] = cur.cost + map[nr][nc];
+					pq.add(new Edge(nr, nc, dist[nr][nc]));
 				}
 			}
 		}
