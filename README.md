@@ -4,6 +4,17 @@
 <!-- <img src="https://static.solved.ac/tier_small/*LEVEL*.svg" height="18px" /> | [*NO*](http://noj.am/*NO*) | *TITLE* -->
 
 # Algorithm Study
+### 10주차 (21.10.27)
+레벨 | 번호 | 제목
+:-: | :-: | :-:
+<img src="https://static.solved.ac/tier_small/9.svg" height="18px"/> | [2529](http://noj.am/2529) | 부등호
+<img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [3190](http://noj.am/3190) | 뱀
+
+레벨 | 유형 | 제목
+:-: | :-: | :-:
+3️⃣ | DFS,BFS | [단어 변환](https://programmers.co.kr/learn/courses/30/lessons/43163)
+3️⃣ | DFS,BFS | [여행경로](https://programmers.co.kr/learn/courses/30/lessons/43164)
+#
 ### 9주차 (21.10.20) - N과 M 시리즈
 정원 : https://www.acmicpc.net/workbook/view/2052 </br>
 성현 : 1, 4, 7, 10 </br>
