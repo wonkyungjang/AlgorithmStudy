@@ -1,0 +1,41 @@
+import java.util.*;
+class Solution {
+    static boolean[] v;
+    static Queue<int[]> q;
+    static int answer;
+    public int solution(String begin, String target, String[] words) {
+        answer = 0;
+        v=new boolean[words.length];
+        q=new LinkedList<>();
+        q.add(new int[]{-1,0});
+        bfs(begin,target,words);
+        return answer;
+    }
+    
+    public void bfs(String begin, String target,String[] words) {
+        
+        while(!q.isEmpty()){
+            
+            int p[]=q.poll();
+     
+            String s="ab";
+            if(p[0]==-1) s=begin;
+            else s=words[p[0]];
+            if(target.equals(s)){
+                answer=p[1];
+                return;
+            }
+            
+            for(int i=0;i<words.length;i++){
+                int cnt=0;
+                for(int j=0;j<s.length();j++){
+                    if(s.charAt(j)!=words[i].charAt(j)) cnt++;
+                }
+                if(cnt==1 && !v[i]){
+                    v[i]=true;
+                    q.add(new int[]{i,p[1]+1});
+                }
+            }
+        }
+    }
+}
