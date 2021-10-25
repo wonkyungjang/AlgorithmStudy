@@ -11,17 +11,10 @@ class Solution {
         list=new ArrayList<>();
         v=new boolean[tickets.length];
         
-        for(int i=0;i<tickets.length;i++){
-            if(!v[i] && tickets[i][0].equals("ICN")){
-                v[i]=true;
-                port[0]=tickets[i][0];
-                port[1]=tickets[i][1];
-                dfs(tickets,2,tickets[i][1]);
-                v[i]=false;
-            }
-        }
- 
-        //배열 오름차순 정렬
+        port[0]="ICN";
+        dfs(tickets,1,"ICN");
+
+        //단순 pq는 스트링 배열 정렬이 안됨...
         list.sort((o1,o2)-> {
            
             int x=0;
@@ -39,7 +32,7 @@ class Solution {
     
     
     public void dfs(String[][] arr, int cnt,String begin) {
-        
+        //list에 다 넣어주고 나서 list 오름차순하기 
         if(cnt==arr.length+1){
             String temp[]=new String[arr.length+1];
             for(int i=0;i<port.length;i++)
