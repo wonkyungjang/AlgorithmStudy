@@ -1,0 +1,60 @@
+import java.util.*;
+
+class Solution {
+    
+    static String[] port;
+    static ArrayList<String[]> list;
+    static boolean[] v;
+    public String[] solution(String[][] tickets) {
+        
+        port=new String[tickets.length+1];
+        list=new ArrayList<>();
+        v=new boolean[tickets.length];
+        
+        for(int i=0;i<tickets.length;i++){
+            if(!v[i] && tickets[i][0].equals("ICN")){
+                v[i]=true;
+                port[0]=tickets[i][0];
+                port[1]=tickets[i][1];
+                dfs(tickets,2,tickets[i][1]);
+                v[i]=false;
+            }
+        }
+ 
+        //배열 오름차순 정렬
+        list.sort((o1,o2)-> {
+           
+            int x=0;
+           for(int i=0;i<o1.length;i++){
+               
+               x= o1[i].compareTo(o2[i]);
+               if(x!=0) return x;
+           }
+                return x;
+        });
+        
+        String[] answer = list.get(0);
+        return answer;
+    }
+    
+    
+    public void dfs(String[][] arr, int cnt,String begin) {
+        
+        if(cnt==arr.length+1){
+            String temp[]=new String[arr.length+1];
+            for(int i=0;i<port.length;i++)
+                temp[i]=port[i];
+            list.add(temp);
+            return;
+        }
+        
+        for(int i=0;i<arr.length;i++){
+            if(!v[i] && arr[i][0].equals(begin)){
+                v[i]=true;
+                port[cnt]=arr[i][1];
+                dfs(arr,cnt+1,arr[i][1]);
+                v[i]=false;
+            }   
+        }   
+    }
+}
