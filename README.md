@@ -3,7 +3,7 @@
 <!-- Gold : 5(11), 4(12), 3(13), 2(14), 1(15) -->
 <!-- <img src="https://static.solved.ac/tier_small/*LEVEL*.svg" height="18px" /> | [*NO*](http://noj.am/*NO*) | *TITLE* -->
 # Algorithm Study
-### 13주차 (21.11.17) - 문자열, DP
+### 13주차 (21.11.17)
 레벨 | 번호 | 제목
 :-: | :-: | :-:
 <img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [14500](http://noj.am/14500) | 테트로미노
