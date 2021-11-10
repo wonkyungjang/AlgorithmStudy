@@ -2,8 +2,15 @@
 <!-- Silver : 5(6), 4(7), 3(8), 2(9), 1(10) -->
 <!-- Gold : 5(11), 4(12), 3(13), 2(14), 1(15) -->
 <!-- <img src="https://static.solved.ac/tier_small/*LEVEL*.svg" height="18px" /> | [*NO*](http://noj.am/*NO*) | *TITLE* -->
-
 # Algorithm Study
+### 13주차 (21.11.17) - 문자열, DP
+레벨 | 번호 | 제목
+:-: | :-: | :-:
+<img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [14500](http://noj.am/14500) | 테트로미노
+<img src="https://static.solved.ac/tier_small/10.svg" height="18px"/> | [9934](http://noj.am/9934) | 완전 이진 트리
+<img src="https://static.solved.ac/tier_small/10.svg" height="18px"/> | [2156](http://noj.am/2156) | 포도주 시식
+<img src="https://static.solved.ac/tier_small/11.svg" height="18px"/> | [2589](http://noj.am/2589) | 보물섬
+#
 ### 11주차 (21.11.03) - 문자열, DP
 레벨 | 번호 | 제목
 :-: | :-: | :-:
