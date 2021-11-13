@@ -1,0 +1,75 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class BJ2589_보물섬 {
+
+	static char[][] map;
+	static int dr[] = { -1, 1, 0, 0 };
+	static int dc[] = { 0, 0, -1, 1 };
+	static boolean[][] v;
+	static int[][] maxd; // 최단거리의 최대거리 저장
+	static Queue<int[]> q;
+	static int r, c;
+	static int max;
+
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		r = Integer.parseInt(st.nextToken());
+		c = Integer.parseInt(st.nextToken());
+		map = new char[r][c];
+		maxd = new int[r][c]; 
+		v = new boolean[r][c];
+		q = new LinkedList<>();
+		for (int i = 0; i < r; i++) {
+			String str = br.readLine();
+			char cc[] = str.toCharArray();
+			for (int j = 0; j < c; j++) {
+				map[i][j] = cc[j];
+			}
+		}
+		max = 0;
+		for (int i = 0; i < r; i++) {
+			for (int j = 0; j < c; j++) {
+				if (map[i][j] == 'L') {
+					q.add(new int[] { i, j, 0 }); // x,y,count
+					v[i][j] = true;
+					bfs();
+					v = new boolean[r][c]; // 돌아왔을 때 v배열 초기화
+
+				}
+			}
+		}
+		System.out.println(max);
+	}
+
+	private static void bfs() {
+
+		while (!q.isEmpty()) {
+
+			int p[] = q.poll();
+
+			for (int d = 0; d < 4; d++) {
+
+				int nr = p[0] + dr[d];
+				int nc = p[1] + dc[d];
+
+				if (nr < 0 || nr >= r || nc < 0 || nc >= c)
+					continue;
+
+				if (map[nr][nc] == 'L' && !v[nr][nc]) {
+					v[nr][nc] = true;
+					q.add(new int[] { nr, nc, p[2] + 1 });
+					if (maxd[nr][nc] < p[2] + 1) {
+						maxd[nr][nc] = p[2] + 1;
+						if (max < maxd[nr][nc])
+							max = maxd[nr][nc];
+					}
+				}
+			}
+		}
+	}
+}
