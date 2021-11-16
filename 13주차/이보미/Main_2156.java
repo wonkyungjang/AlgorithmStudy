@@ -20,7 +20,7 @@ public class Main_2156 {
 			wine[i] = Integer.parseInt(br.readLine());
 		}
 		
-		// 첫잔일 경우
+	// 첫잔일 경우
         if (n >= 1) {
             dp[0] = wine[0];
         } 
