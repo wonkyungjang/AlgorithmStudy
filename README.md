@@ -3,6 +3,7 @@
 <!-- Gold : 5(11), 4(12), 3(13), 2(14), 1(15) -->
 <!-- <img src="https://static.solved.ac/tier_small/*LEVEL*.svg" height="18px" /> | [*NO*](http://noj.am/*NO*) | *TITLE* -->
 # Algorithm Study
+#
 ### 14주차 (21.11.24)
 레벨 | 번호 | 제목
 :-: | :-: | :-:
