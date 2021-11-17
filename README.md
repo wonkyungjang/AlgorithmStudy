@@ -3,6 +3,12 @@
 <!-- Gold : 5(11), 4(12), 3(13), 2(14), 1(15) -->
 <!-- <img src="https://static.solved.ac/tier_small/*LEVEL*.svg" height="18px" /> | [*NO*](http://noj.am/*NO*) | *TITLE* -->
 # Algorithm Study
+### 14주차 (21.11.24)
+레벨 | 번호 | 제목
+:-: | :-: | :-:
+<img src="https://static.solved.ac/tier_small/2.svg" height="18px"/> | [6603](http://noj.am/6603) | 로또
+<img src="https://static.solved.ac/tier_small/4.svg" height="18px"/> | [11656](http://noj.am/11656) | 접미사배열
+<img src="https://static.solved.ac/tier_small/8.svg" height="18px"/> | [17952](http://noj.am/17952) | 과제는 끝나지 않아!
 ### 13주차 (21.11.17)
 레벨 | 번호 | 제목
 :-: | :-: | :-:
